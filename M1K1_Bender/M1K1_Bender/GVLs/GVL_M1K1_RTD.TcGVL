@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_M1K1_RTD" Id="{ed28e0a2-9e5f-4223-8ca9-08f90851b106}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	// M1K1 US RTDs
+	{attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M1K1US1_M1K1US2]^RTD Inputs Channel 1^Value'}
+	nM1K1US_RTD_1 AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M1K1US1_M1K1US2]^RTD Inputs Channel 2^Value'}
+	nM1K1US_RTD_2 AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M1K1US3_M1K1DS1]^RTD Inputs Channel 1^Value'}
+	nM1K1US_RTD_3 AT %I* : INT;
+
+	// M1K1 DS RTDs
+	{attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M1K1US3_M1K1DS1]^RTD Inputs Channel 2^Value'}
+	nM1K1DS_RTD_1 AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M1K1DS2_M1K1DS3]^RTD Inputs Channel 1^Value'}
+	nM1K1DS_RTD_2 AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIIB[EL3202-0010_M1K1DS2_M1K1DS3]^RTD Inputs Channel 2^Value'}
+	nM1K1DS_RTD_3 AT %I* : INT;
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

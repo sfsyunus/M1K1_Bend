@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_M1K1_Constants" Id="{0f41f14c-3122-4f9d-824a-be5d7042bc4c}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL CONSTANT
+	// Encoder reference values in counts = nm
+	nM1K1bendUS_ENC_REF : ULINT := 0;
+	nM1K1bendDS_ENC_REF : ULINT := 0;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
