@@ -4,8 +4,8 @@
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL CONSTANT
 	// Encoder reference values in counts = nm
-	nM1K1bendUS_ENC_REF : ULINT := 0;
-	nM1K1bendDS_ENC_REF : ULINT := 0;
+	nM1K1bendUS_ENC_REF : ULINT := 13376858;
+	nM1K1bendDS_ENC_REF : ULINT := 14336722;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

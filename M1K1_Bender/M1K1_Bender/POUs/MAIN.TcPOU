@@ -162,8 +162,8 @@ bM1K1DS_RTD_3_Err := fM1K1DS_RTD_3 = 0;
 
 
 // LAMP KB Bender RTD interlocks
-M1.bHardwareEnable R= fM1K1US_RTD_1 > 1000 OR bM1K1US_RTD_1_Err;
-M2.bHardwareEnable R= fM1K1DS_RTD_1 > 1000 OR bM1K1DS_RTD_1_Err;
+M1.bHardwareEnable R= fM1K1US_RTD_1 > 10000 OR bM1K1US_RTD_1_Err;
+M2.bHardwareEnable R= fM1K1DS_RTD_1 > 10000 OR bM1K1DS_RTD_1_Err;
 
 // Logging
 fbLogHandler();
