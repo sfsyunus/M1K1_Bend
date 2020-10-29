@@ -9,7 +9,7 @@ VAR
                               .bLimitBackwardEnable:=TIIB[EL7041_M1K1_BEND_US]^STM Status^Status^Digital input 2;
 							  .nRawEncoderULINT    := TIIB[EL5042_M1K1_BEND_USDS]^FB Inputs Channel 1^Position'}
 	{attribute 'pytmc' := '
-	pv: MR1K1:KBO:MMS:BEND:US
+	pv: MR1K1:BEND:MMS:US
 	'}
 	M1 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
 	fbMotionStage_m1 : FB_MotionStage;
@@ -18,22 +18,22 @@ VAR
                               .bLimitBackwardEnable:=TIIB[EL7041_M1K1_BEND_DS]^STM Status^Status^Digital input 2;
 							  .nRawEncoderULINT    := TIIB[EL5042_M1K1_BEND_USDS]^FB Inputs Channel 2^Position'}
 	{attribute 'pytmc' := '
-	pv: MR1K1:KBO:MMS:BEND:DS
+	pv: MR1K1:BEND:MMS:DS
 	'}
 	M2 : DUT_MotionStage := (nEnableMode:=ENUM_StageEnableMode.ALWAYS, bPowerSelf:=TRUE);
-	fbMotionStage_m11 : FB_MotionStage;
+	fbMotionStage_m2 : FB_MotionStage;
 	
 	// Encoder Arrays/RMS Watch:
 	//MR1K1 US BENDER ENC RMS
 	{attribute 'pytmc' := '
-		pv: MR1K1:KBO:ENC:BEND:US
+		pv: MR1K1:BEND:ENC:US
 	'}
 	fbBendUSRMSErrorM1K1 : FB_RMSWatch;
 	fMaxBendUSRMSErrorM1K1 : LREAL;
 	fMinBendUSRMSErrorM1K1 : LREAL;	
 	//MR1K1 DS BENDER ENC RMS
 	{attribute 'pytmc' := '
-		pv: MR1K1:KBO:ENC:BEND:DS
+		pv: MR1K1:BEND:ENC:DS
 	'}
 	fbBendDSRMSErrorM1K1 : FB_RMSWatch;
 	fMaxBendDSRMSErrorM1K1 : LREAL;
@@ -42,14 +42,14 @@ VAR
 	// Encoder Reference Values
 	//MR1K1 BEND US ENC REF
 	{attribute 'pytmc' := '
-		pv: MR1K1:KBO:ENC:BEND:US:REF
+		pv: MR1K1:BEND:ENC:US:REF
 		field: EGU cnt
 		io: i
 	'}
 	nEncRefBendUSM1K1 : UDINT;
 	//MR1K1 BEND DS ENC REF
 	{attribute 'pytmc' := '
-		pv: MR1K1:KBO:ENC:BEND:DS:REF
+		pv: MR1K1:BEND:ENC:US:REF
 		field: EGU cnt
 		io: i
 	'}
@@ -62,21 +62,21 @@ VAR
 	// MR1K1 Bender RTDs
 	// MR1K1 US RTDs
 	{attribute 'pytmc' := '
-		pv: MR1K1:KBO:RTD:BEND:US:1
+		pv: MR1K1:BEND:RTD:US:1
 		field: ASLO 0.1
 		field: EGU C
 		io: i
 	'}
 	fM1K1US_RTD_1 : REAL;
 	{attribute 'pytmc' := '
-		pv: MR1K1:KBO:RTD:BEND:US:2
+		pv: MR1K1:BEND:RTD:US:2
 		field: ASLO 0.1
 		field: EGU C
 		io: i
 	'}
 	fM1K1US_RTD_2 : REAL;
 	{attribute 'pytmc' := '
-		pv: MR1K1:KBO:RTD:BEND:US:3
+		pv: MR1K1:BEND:RTD:US:3
 		field: ASLO 0.1
 		field: EGU C
 		io: i
@@ -85,21 +85,21 @@ VAR
 
 	// M1K1 DS RTDs
 	{attribute 'pytmc' := '
-		pv: MR1K1:KBO:RTD:BEND:DS:1
+		pv: MR1K1:BEND:RTD:DS:1
 		field: ASLO 0.1
 		field: EGU C
 		io: i
 	'}
 	fM1K1DS_RTD_1 : REAL;
 	{attribute 'pytmc' := '
-		pv: MR1K1:KBO:RTD:BEND:DS:2
+		pv: MR1K1:BEND:RTD:DS:2
 		field: ASLO 0.1
 		field: EGU C
 		io: i
 	'}
 	fM1K1DS_RTD_2 : REAL;
 	{attribute 'pytmc' := '
-		pv: MR1K1:KBO:RTD:BEND:DS:3
+		pv: MR1K1:BEND:RTD:DS:3
 		field: ASLO 0.1
 		field: EGU C
 		io: i
@@ -122,7 +122,7 @@ END_VAR]]></Declaration>
       <ST><![CDATA[//FB_Motion stages for MR1K1 Benders
 //MR1K1 BEND
 fbMotionStage_m1(stMotionStage:=M1);
-fbMotionStage_m1(stMotionStage:=M2);
+fbMotionStage_m2(stMotionStage:=M2);
 
 // Calculate Pitch RMS Error for MR1K1 Benders:
 //MR1K1 US BENDER ENC RMS

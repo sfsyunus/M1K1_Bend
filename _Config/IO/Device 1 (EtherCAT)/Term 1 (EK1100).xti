@@ -34,8 +34,11 @@
 		<Box File="EL3054_FLOW_PRESS.xti" Id="10">
 			<EtherCAT PortABoxInfo="#x01000009"/>
 		</Box>
-		<Box File="Term 11 (EL9512).xti" Id="11">
+		<Box File="EL1004_M1K1_BENDER_STO.xti" Id="12">
 			<EtherCAT PortABoxInfo="#x0100000a"/>
+		</Box>
+		<Box File="Term 11 (EL9512).xti" Id="11">
+			<EtherCAT PortABoxInfo="#x0100000c"/>
 		</Box>
 	</Box>
 </TcSmItem>

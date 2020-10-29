@@ -924,7 +924,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{A169C851-AEB9-44DE-ABEF-394AFD4815E0}" Name="M1K1_bender" PrjFilePath="..\..\M1K1_bender\M1K1_bender.plcproj" TmcFilePath="..\..\M1K1_bender\M1K1_bender.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="M1K1_bender\M1K1_bender.tmc">
 			<Name>M1K1_bender Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -1365,6 +1365,10 @@ External Setpoint Generation:
 	</Project>
 	<Mappings>
 		<OwnerA Name="M1K1_bender Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^EL1004_M1K1_BENDER_STO">
+				<Link VarA="PlcTask Inputs^Main.M1K1BENDbSTOEnable1" VarB="Channel 1^Input"/>
+				<Link VarA="PlcTask Inputs^Main.M1K1BENDbSTOEnable2" VarB="Channel 2^Input"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^EL3202-0010_M1K1DS2_M1K1DS3">
 				<Link VarA="PlcTask Inputs^GVL_M1K1_RTD.nM1K1DS_RTD_2" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_M1K1_RTD.nM1K1DS_RTD_3" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
@@ -1376,6 +1380,18 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^EL3202-0010_M1K1US3_M1K1DS1">
 				<Link VarA="PlcTask Inputs^GVL_M1K1_RTD.nM1K1DS_RTD_1" VarB="RTD Inputs Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_M1K1_RTD.nM1K1US_RTD_3" VarB="RTD Inputs Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^EL5042_M1K1_BEND_USDS">
+				<Link VarA="PlcTask Inputs^Main.M1.nRawEncoderULINT" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M2.nRawEncoderULINT" VarB="FB Inputs Channel 2^Position" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^EL7041_M1K1_BEND_DS">
+				<Link VarA="PlcTask Inputs^Main.M2.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M2.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1100)^EL7041_M1K1_BEND_US">
+				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TINC^NC-Task 1 SAF^Axes^M1K1-BEND-DS">
 				<Link VarA="PlcTask Inputs^Main.M2.Axis.NcToPlc" VarB="Outputs^ToPlc"/>
