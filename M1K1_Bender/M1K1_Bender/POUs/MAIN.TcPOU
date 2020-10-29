@@ -63,21 +63,21 @@ VAR
 	// MR1K1 US RTDs
 	{attribute 'pytmc' := '
 		pv: MR1K1:BEND:RTD:US:1
-		field: ASLO 0.1
+		field: ASLO 0.01
 		field: EGU C
 		io: i
 	'}
 	fM1K1US_RTD_1 : REAL;
 	{attribute 'pytmc' := '
 		pv: MR1K1:BEND:RTD:US:2
-		field: ASLO 0.1
+		field: ASLO 0.01
 		field: EGU C
 		io: i
 	'}
 	fM1K1US_RTD_2 : REAL;
 	{attribute 'pytmc' := '
 		pv: MR1K1:BEND:RTD:US:3
-		field: ASLO 0.1
+		field: ASLO 0.01
 		field: EGU C
 		io: i
 	'}
@@ -86,21 +86,21 @@ VAR
 	// M1K1 DS RTDs
 	{attribute 'pytmc' := '
 		pv: MR1K1:BEND:RTD:DS:1
-		field: ASLO 0.1
+		field: ASLO 0.01
 		field: EGU C
 		io: i
 	'}
 	fM1K1DS_RTD_1 : REAL;
 	{attribute 'pytmc' := '
 		pv: MR1K1:BEND:RTD:DS:2
-		field: ASLO 0.1
+		field: ASLO 0.01
 		field: EGU C
 		io: i
 	'}
 	fM1K1DS_RTD_2 : REAL;
 	{attribute 'pytmc' := '
 		pv: MR1K1:BEND:RTD:DS:3
-		field: ASLO 0.1
+		field: ASLO 0.01
 		field: EGU C
 		io: i
 	'}
